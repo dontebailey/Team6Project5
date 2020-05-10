@@ -29,7 +29,6 @@ public class searchSong implements Initializable {
                     @Override
                     public void changed(ObservableValue<? extends DataHandler.songDataType> observable, DataHandler.songDataType oldValue, DataHandler.songDataType newValue) {
                         var song = listview1.getSelectionModel().getSelectedItem();
-                        System.out.println(song);
                         find_sim(song.id);
                     }
                 }
