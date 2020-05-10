@@ -7,7 +7,7 @@
    <children>
       <VBox layoutX="4.0" layoutY="4.0" prefHeight="392.0" prefWidth="591.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="591.0" text="Song Search" />
+            <Button mnemonicParsing="false" onAction="#openSongWindow" prefHeight="100.0" prefWidth="591.0" text="Song Search" />
             <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="591.0" text="GitHub Jobs" />
             <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="591.0" text="Blizzard's Hearthstone" />
             <Button fx:id="openChuck" mnemonicParsing="false" onAction="#openChuckNorris" prefHeight="100.0" prefWidth="591.0" text="Chuck Norris Jokes" />

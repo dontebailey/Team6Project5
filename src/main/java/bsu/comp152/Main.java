@@ -46,6 +46,22 @@ public class Main extends Application {
         chuckWindow.setScene(windowContents);
         chuckWindow.show();
     }
+    @FXML
+    public void openSongWindow(ActionEvent event){
+        Parent root = null;
+        var loc = getClass().getResource("searchSong.fxml");
+        try {
+            root = FXMLLoader.load(loc);
+        } catch (IOException e) {
+            System.out.println("Couldn't Find FXML file!!!!!!");
+        }
+        Scene windowContents = new Scene(root, 600, 400);
+        Stage songWindow = new Stage();
+        songWindow.setScene(windowContents);
+        songWindow.setTitle("Song Search API");
+        songWindow.show();
+    }
+
 
 
 }
