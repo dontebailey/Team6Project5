@@ -97,7 +97,7 @@ public class DataHandler {
             return "Song Title: " + song_name ;  //only title for display later
         }
     }
-    public ArrayList<ChuckNorrisModel.jokeCategories> getChuckData(){
+    public String getChuckData(){
         var requestBuilder = HttpRequest.newBuilder();
         var dataRequest = requestBuilder.uri(URI.create(webLocation)).build();
         HttpResponse<String> response = null;
@@ -115,35 +115,24 @@ public class DataHandler {
         }
         var usefulData = response.body();
         var jsonInterpreter = new Gson();
-        var jokeData = jsonInterpreter.fromJson(usefulData, ChuckNorrisModel.jokeDataType.class);
-        //System.out.println(recipeData.results);
-        return jokeData.categories;
+        var jokeData = jsonInterpreter.fromJson(usefulData, DataHandler.jokeDataType.class);
+        return jokeData.value;
 
     }
 
     class jokeDataType{
-        ArrayList<ChuckNorrisModel.jokeCategories> categories;
+        ArrayList<String> categories;
+        String created_at;
+        String icon_url;
+        String id;
+        String updated_at;
+        String url;
         String value;
 
         @Override
         public String toString(){
             return value;
         }
-    }
-
-    class jokeCategories{
-        String animal;
-        String career;
-        String celebrity;
-        String fashion;
-        String food;
-        String history;
-        String money;
-        String movie;
-        String sport;
-        String travel;
-
-
     }
 
 

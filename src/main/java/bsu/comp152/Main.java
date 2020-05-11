@@ -34,14 +34,14 @@ public class Main extends Application {
 
     @FXML
     public void openChuckNorris(ActionEvent event){
-        Parent ChuckRoot = null;
+        Parent root = null;
         var loc = getClass().getResource("ChuckNorris.fxml");
         try{
-            ChuckRoot = FXMLLoader.load(loc);
+            root = FXMLLoader.load(loc);
         } catch(IOException e){
             System.out.println("Couldn't find FXML file");
         }
-        Scene windowContents = new Scene(ChuckRoot);
+        Scene windowContents = new Scene(root, 600, 400);
         Stage chuckWindow = new Stage();
         chuckWindow.setScene(windowContents);
         chuckWindow.show();
