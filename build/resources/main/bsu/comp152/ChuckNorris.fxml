@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsu.comp152.ChuckNorrisWindow">
+   <children>
+      <Pane layoutX="4.0" layoutY="3.0" prefHeight="394.0" prefWidth="592.0">
+         <children>
+            <Text layoutX="195.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose A Category!!" wrappingWidth="201.13670349121094">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="Animal" layoutX="32.0" layoutY="68.0" mnemonicParsing="false" onAction="#joke_animal" text="Animal" />
+            <Button fx:id="Career" layoutX="143.0" layoutY="68.0" mnemonicParsing="false" onAction="#joke_career" text="Career" />
+            <Button fx:id="Celebrity" layoutX="270.0" layoutY="68.0" mnemonicParsing="false" onAction="#joke_celebrity" text="Celebrity" />
+            <Button fx:id="Fashion" layoutX="404.0" layoutY="68.0" mnemonicParsing="false" onAction="#joke_fashion" text="Fashion" />
+            <Button fx:id="Food" layoutX="505.0" layoutY="68.0" mnemonicParsing="false" onAction="#joke_food" text="Food" />
+            <Button fx:id="History" layoutX="32.0" layoutY="128.0" mnemonicParsing="false" onAction="#joke_history" text="History" />
+            <Button fx:id="Money" layoutX="143.0" layoutY="128.0" mnemonicParsing="false" onAction="#joke_money" text="Money" />
+            <Button fx:id="Movie" layoutX="270.0" layoutY="128.0" mnemonicParsing="false" onAction="#joke_movie" text="Movie" />
+            <Button fx:id="Sport" layoutX="404.0" layoutY="128.0" mnemonicParsing="false" onAction="#joke_sport" text="Sport" />
+            <Button fx:id="Travel" layoutX="505.0" layoutY="128.0" mnemonicParsing="false" onAction="#joke_travel" text="Travel" />
+            <TextArea fx:id="Joke" editable="false" layoutX="5.0" layoutY="174.0" prefHeight="213.0" prefWidth="577.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
